@@ -1,0 +1,59 @@
+!include https://raw.githubusercontent.com/jrosiek/plantuml-extensions/master/utils/data-structures.iuml
+!include https://raw.githubusercontent.com/jrosiek/plantuml-extensions/master/utils/images.iuml
+
+'
+' Create participant that represents kafka topic
+'
+' Usage example:
+'
+'   kafka_topic_component(A, FooBarBazBooBa, foobarGUID, "{userGUID, userData}", "", "k1:v1|k-2:v-bar2|k-foo:v-boobaa", vert)
+'   kafka_topic_component(B, Boolaboola, bazbarGUID, "", compacted, "k1:v1|k-2:v-bar2|k-foo:v-boobaa")
+'   kafka_topic_component(C, SimpleFoo)
+'
+'   A -right-> B : 1. foo
+'   B --> C : 2. bar
+'
+!function $_kafka_topic_component_entry_horiz_key_callback($key, $value, $arg)
+    !return " **" + $key + "** |"
+!endfunction
+
+!function $_kafka_topic_component_entry_horiz_value_callback($key, $value, $arg)
+    !return " " + $value + " |"
+!endfunction
+
+!function $_kafka_topic_component_entry_vert_callback($key, $value, $arg)
+    !return "\n| **" + $key + "** | " + $value + " |"
+!endfunction
+
+!unquoted function kafka_topic_component($id, $name, $key="", $payload="", $compacted="", $entries="", $dir="horiz")
+    !$keyico = $img16_key
+    !$payloadico = $img16_binfile
+    !$compactico = $img16_history
+    !$kafkaico = $img26_kafka
+    !$attributes = ""
+    !if ($compacted == "compacted")
+        !$attributes = $attributes + "\n<img:" + $compactico + "> compacted"
+    !endif
+    !if ($key != "")
+        !$attributes = $attributes + "\n<img:" + $keyico + "> **" + $key + "**"
+    !endif
+    !if ($payload != "")
+        !$attributes = $attributes + "\n<img:" + $payloadico + "> " + $payload + ""
+    !endif
+    !$content = "**<img:"+$kafkaico+"> " + $name + "**"
+    !if ($attributes != "")
+        !$content = $content + "\n----" + $attributes
+    !endif
+    !if ($entries != "")
+        !if ($dir != "vert")
+            !$content = $content + "\n----\n| <img:" + $keyico + "> |" + $_dict_foreach_value($entries, "$_kafka_topic_component_entry_horiz_key_callback") + "\n"
+            !$content = $content + "| |" + $_dict_foreach_value($entries, "$_kafka_topic_component_entry_horiz_value_callback")
+        !else
+            !$content = $content + "\n----\n| <img:" + $keyico + "> | |"
+            !$content = $content + $_dict_foreach_value($entries, "$_kafka_topic_component_entry_vert_callback")
+        !endif
+    !endif
+    queue $id <<Kafka>> [
+        $content
+    ]
+!endfunction

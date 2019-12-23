@@ -1,20 +1,50 @@
+!include https://raw.githubusercontent.com/jrosiek/plantuml-extensions/master/utils/data-structures.iuml
+
 '
 ' Create participant that represents kafka topic
 '
 ' Usage example:
 '
-'   kafka_topic(A, FooBarBazBooBa, foobarGUID)
-'   kafka_topic(B, Boolaboola, bazbarGUID, compacted)
+'   kafka_topic(A, FooBarBazBooBa, foobarGUID, "{userGUID, userData}", "", "k1:v1|k-2:v-bar2|k-foo:v-boobaa", vert)
+'   kafka_topic(B, Boolaboola, bazbarGUID, "", compacted, "k1:v1|k-2:v-bar2|k-foo:v-boobaa")
+'   kafka_topic(C, SimpleFoo, simpleGuid)
 '   A --> B : foomsg
+'   B --> B : barmsg
 '
-!unquoted function kafka_topic($id, $name, $key, $compacted="")
+!function $_kafka_topic_entry_horiz_key_callback($key, $value, $arg)
+    !return " **" + $key + "** |"
+!endfunction
 
-!$keyico = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAQCAYAAAAmlE46AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACCSURBVCiRvZHRCcMwDESfO0yyQ8le/QpNx9EcTUbpb0KygPtRlRohOyaQHhwIc49DMpykFhDgpRZ924UWIKqfwAjMQFMCxUBfjYBcCuA1mYOZu1LjmjRGYFJHPvu6ehjIWo5A7nGGTHjj9x3VUJ/bJwft6hAUnGDwgp5uSdO9Fvq/3hRQQX7csJ4XAAAAAElFTkSuQmCC"
-!$compactico = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAQCAYAAAAmlE46AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAABGSURBVCiRY2AYFuAoAwPDfxz4MC7FDHg0wTCGYgY0jegALo6umCiNTFh9RwQYGI1HGLD7hSRwmIGE6CBkCDZ8iFIX0hEAAKeVMPx3fNfcAAAAAElFTkSuQmCC"
-!$compactLabel = ""
-!if ($compacted == "compacted")
-!$compactLabel = "<img:" + $compactico + "> compacted\n"
-!endif
-queue "$compactLabel<img:$keyico> **$key**\n----\n//<U+00AB>Kafka<U+00BB>//\n**$name**" as $id
+!function $_kafka_topic_entry_horiz_value_callback($key, $value, $arg)
+    !return " " + $value + " |"
+!endfunction
 
+!function $_kafka_topic_entry_vert_callback($key, $value, $arg)
+    !return "\n| **" + $key + "** | " + $value + " |"
+!endfunction
+
+!unquoted function kafka_topic($id, $name, $key, $payload="", $compacted="", $entries="", $dir="horiz")
+    !$keyico = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAQCAYAAAAmlE46AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACCSURBVCiRvZHRCcMwDESfO0yyQ8le/QpNx9EcTUbpb0KygPtRlRohOyaQHhwIc49DMpykFhDgpRZ924UWIKqfwAjMQFMCxUBfjYBcCuA1mYOZu1LjmjRGYFJHPvu6ehjIWo5A7nGGTHjj9x3VUJ/bJwft6hAUnGDwgp5uSdO9Fvq/3hRQQX7csJ4XAAAAAElFTkSuQmCC"
+    !$payloadico = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAABySURBVCiRpZDRDYAgDEQfhkGMS/rrbuocxknqh2KAgha9hIQ0fddr4YNWQB7eBvQxIC+GI7ADgxVQUADiGGR/gOmKlzTkE/Pp0hniJMqBkrva0bL03esLoCsYhVoSyaGlar+Wtpy1XqxIPLA0QHOD+akD+SoolPP46PoAAAAASUVORK5CYII="
+    !$compactico = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAQCAYAAAAmlE46AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAABGSURBVCiRY2AYFuAoAwPDfxz4MC7FDHg0wTCGYgY0jegALo6umCiNTFh9RwQYGI1HGLD7hSRwmIGE6CBkCDZ8iFIX0hEAAKeVMPx3fNfcAAAAAElFTkSuQmCC"
+    !$kafkaico = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAaCAYAAAC+aNwHAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAABiQAAAYkBni4RNQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAH6SURBVDiNrdVfaI5xFAfwj9cyfy42FqldyCZ/iqlxQ2l3XJiykhQ3blyRXChJuaDcuMOlC4rSaimSXXGhlVz4s5bUXqXRYu8U29LYvC6e83h/e2ib8q23857vOc/5nd/58zzUcBiv8BWPsd0/4Aiq8fAz/MAE1s83QD++YE3o+yPg1fkGGMfTRF8SAR7M9WAp5HO0oxP1OJvwKRqwA6uLgXZGFtXk9xZNic9pTCb263HYb2zGwzBexqrEti/4Mi6iL/QLxUyOhqGpwN8Ofl3o9fiAcilxWoxN8b8DdYmtMQKMhv4dY1iWO+zF50INBtCKLlSC643rXAv9BmzDVBBvcBefQh8L+QjdhQNeYCXcD+JWkvYKvA7+jlq798i60YVFefofw3FLoXDHg+82C0pRELLpS7E05ORsAUTq+T0bg9uI4eDvyTpUh2O4gpOJrxbZFuZFG4isqhiSbWY/nphZxPdYmwdpk1U1N06hB8tlsz+k1ratOBN6T/E6J8LQVuB78VMyOHiJSqngWAk5WuCHsQAbQm9AM0ZSp/Y4KX+RpCu7C9Oyab2JwfA7lTt04Jva/at4JyYtcEhtZiZwXm3A9MkqvxsLcS4cL/kTzWYuGv7DK60sW+XW0DtDDs4VIMfBOHFc9m2Ylg1Vy3wDwAHZN2FE1o3iLPwVvwCuuJnPcQHaAwAAAABJRU5ErkJggg=="
+    !$content = ""
+    !if ($compacted == "compacted")
+        !$content = $content + "<img:" + $compactico + "> compacted\n"
+    !endif
+    !$content = $content + "<img:" + $keyico + "> **" + $key + "**\n"
+    !if ($payload != "")
+        !$content = $content + "----\n<img:" + $payloadico + "> " + $payload + "\n"
+    !endif
+    !$content = $content + "----\n//<U+00AB>Kafka<U+00BB>//\n**<img:"+$kafkaico+"> " + $name + "**"
+    !if ($entries != "")
+        !if ($dir != "vert")
+            !$content = $content + "\n----\n| <img:" + $keyico + "> |" + $_dict_foreach_value($entries, "$_kafka_topic_entry_horiz_key_callback") + "\n"
+            !$content = $content + "| |" + $_dict_foreach_value($entries, "$_kafka_topic_entry_horiz_value_callback")
+        !else
+            !$content = $content + "\n----\n| <img:" + $keyico + "> | |"
+            !$content = $content + $_dict_foreach_value($entries, "$_kafka_topic_entry_vert_callback")
+        !endif
+    !endif
+    queue "$content" as $id
 !endfunction

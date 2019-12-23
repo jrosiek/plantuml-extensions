@@ -9,7 +9,7 @@
 '   kafka_topic(B, Boolaboola, bazbarGUID, "", compacted, "k1:v1|k-2:v-bar2|k-foo:v-boobaa")
 '   kafka_topic(C, SimpleFoo, simpleGuid)
 '   A --> B : foomsg
-'   B --> B : barmsg
+'   B --> C : barmsg
 '
 !function $_kafka_topic_entry_horiz_key_callback($key, $value, $arg)
     !return " **" + $key + "** |"

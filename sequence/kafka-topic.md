@@ -15,10 +15,12 @@ It lets you add the information what is the topic key and whether it is a compac
 
 !include https://raw.githubusercontent.com/jrosiek/plantuml-extensions/master/sequence/kafka-topic.iuml
 
-kafka_topic(A, FooBarBazBooBa, foobarGUID)
-kafka_topic(B, Boolaboola, bazbarGUID, compacted)
+kafka_topic(A, FooBarBazBooBa, foobarGUID, "{userGUID, userData}", "", "k1:v1|k-2:v-bar2|k-foo:v-boobaa", vert)
+kafka_topic(B, Boolaboola, bazbarGUID, "", compacted, "k1:v1|k-2:v-bar2|k-foo:v-boobaa")
+kafka_topic(C, SimpleFoo)
 
 A --> B : foomsg
+B --> C : barmsg
 
 @enduml
 ```

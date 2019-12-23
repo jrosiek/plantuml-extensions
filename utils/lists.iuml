@@ -1,0 +1,43 @@
+
+!function $_list_is_empty($list, $sep="|")
+    !return %strlen($list) == 0
+!endfunction
+
+!function $_list_head($list, $sep="|")
+    !assert %not($_list_is_empty($list, $sep)) : "list is empty"
+    !$sep = %strpos($list, $sep)
+    !if ($sep >= 0)
+        !return %substr($list, 0, $sep)
+    !else
+        !return $list
+    !endif
+!endfunction
+
+!function $_list_tail($list, $sep="|")
+    !assert %not($_list_is_empty($list, $sep))  : "list is empty"
+    !$sep = %strpos($list, $sep)
+    !if ($sep >= 0)
+        !return %substr($list, $sep + 1)
+    !else
+        !return ""
+    !endif
+!endfunction
+
+!function $_list_foreach_value($list, $func, $arg="", $sep="|")
+    !if (%not($_list_is_empty($list, $sep)))
+        !$head = $_list_head($list, $sep)
+        !$tail = $_list_tail($list, $sep)
+        !return %call_user_func($func, $head, $arg) + $_list_foreach_value($tail, $func, $arg, $sep)
+    !else
+        !return ""
+    !endif
+!endfunction
+
+!function $_list_foreach_void($list, $func, $arg="", $sep="|")
+    !if (%not($_list_is_empty($list, $sep)))
+        !$head = $_list_head($list, $sep)
+        !$tail = $_list_tail($list, $sep)
+        %invoke_void_func($func, $head, $arg)
+        $_list_foreach_void($tail, $func, $arg, $sep)
+    !endif
+!endfunction

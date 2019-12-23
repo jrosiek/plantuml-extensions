@@ -1,0 +1,132 @@
+!global $_undef = "<Undef:jZ8kxCza72>"
+!global $_va_sep = "<VaSep:5RDQSEfLgL>"
+!global $_va_key = "<VaKey:k0d9lHz6Jb>"
+
+
+!function $_default_value($default, $msg="no default value")
+    !assert $default != $_undef : $msg
+    !return $default
+!endfunction
+
+
+' ##############################################################################
+' LIST
+
+!function $_list_is_empty($list, $sep="|")
+    !return %strlen($list) == 0
+!endfunction
+
+!function $_list_head($list, $default=$_undef, $sep="|")
+    !if ($_list_is_empty($list, $sep))
+        !return $_default_value($default, "list is empty")
+    !endif
+    !$seppos = %strpos($list, $sep)
+    !if ($seppos >= 0)
+        !return %substr($list, 0, $seppos)
+    !else
+        !return $list
+    !endif
+!endfunction
+
+!function $_list_tail($list, $default=$_undef, $sep="|")
+    !if ($_list_is_empty($list, $sep))
+        !return $_default_value($default, "list is empty")
+    !endif
+    !$seppos = %strpos($list, $sep)
+    !if ($seppos >= 0)
+        !return %substr($list, $seppos + %strlen($sep))
+    !else
+        !return ""
+    !endif
+!endfunction
+
+!function $_list_foreach_value($list, $func, $arg="", $sep="|")
+    !if (%not($_list_is_empty($list, $sep)))
+        !$head = $_list_head($list, $_undef, $sep)
+        !$tail = $_list_tail($list, $_undef, $sep)
+        !return %call_user_func($func, $head, $arg) + $_list_foreach_value($tail, $func, $arg, $sep)
+    !else
+        !return ""
+    !endif
+!endfunction
+
+!function $_list_foreach_void($list, $func, $arg="", $sep="|")
+    !if (%not($_list_is_empty($list, $sep)))
+        !$head = $_list_head($list, $_undef, $sep)
+        !$tail = $_list_tail($list, $_undef, $sep)
+        %invoke_void_func($func, $head, $arg)
+        $_list_foreach_void($tail, $func, $arg, $sep)
+    !endif
+!endfunction
+
+!function $_list_at($list, $index, $default=$_undef, $sep="|")
+    !if ($_list_is_empty($list, $sep))
+        !return $_default_value($default, "no such element in the list")
+    !endif
+    !if ($index == 0)
+        !return $_list_head($list, $_undef, $sep)
+    !else
+        !return $_list_at($_list_tail($list, $_undef, $sep), $index - 1, $default, $sep)
+    !endif
+!endfunction
+
+
+' ##############################################################################
+' DICT
+
+
+!function $_dict_item_key($item, $keysep=":")
+    !$seppos = %strpos($item, $keysep)
+    !assert $seppos >= 0 : "invalid dict item - missing key separator: " + $item
+    !return %substr($item, 0, $seppos)
+!endfunction
+
+!function $_dict_item_value($item, $keysep=":")
+    !$seppos = %strpos($item, $keysep)
+    !assert $seppos >= 0 : "invalid dict item - missing key separator: " + $item
+    !return %substr($item, $seppos + %strlen($keysep))
+!endfunction
+
+
+!function $_dict_at($dict, $key, $default=$_undef, $keysep=":", $sep="|")
+    !if ($_list_is_empty($dict, $sep))
+        !return $_default_value($default, "no such element in the dict: " + $key)
+    !endif
+    !$item = $_list_head($dict, $_undef, $sep)
+    !$itemkey = $_dict_item_key($item, $keysep)
+    !if ($itemkey == $key)
+        !return $_dict_item_value($item, $keysep)
+    !endif
+    !$tail = $_list_tail($dict, $_undef, $sep)
+    !return $_dict_at($tail, $key, $default, $keysep, $sep)
+!endfunction
+
+
+
+!function $__dict_foreach_value_callback($item, $arg)
+    !$keysep = $_dict_at($arg, "keysep", $_undef, $_va_key, $_va_sep)
+    !$func = $_dict_at($arg, "func", $_undef, $_va_key, $_va_sep)
+    !$arg = $_dict_at($arg, "arg", $_undef, $_va_key, $_va_sep)
+    !$key = $_dict_item_key($item, $keysep)
+    !$value = $_dict_item_value($item, $keysep)
+    !return %call_user_func($func, $key, $value, $arg)
+!endfunction
+
+!function $__dict_foreach_void_callback($item, $arg)
+    !$keysep = $_dict_at($arg, "keysep", $_undef, $_va_key, $_va_sep)
+    !$func = $_dict_at($arg, "func", $_undef, $_va_key, $_va_sep)
+    !$arg = $_dict_at($arg, "arg", $_undef, $_va_key, $_va_sep)
+    !$key = $_dict_item_key($item, $keysep)
+    !$value = $_dict_item_value($item, $keysep)
+    %invoke_void_func($func, $key, $value, $arg)
+!endfunction
+
+!function $_dict_foreach_value($list, $func, $arg="", $keysep=":", $sep="|")
+    !$arg = "keysep" + $_va_key + $keysep + $_va_sep + "func" + $_va_key + $func + $_va_sep + "arg" + $_va_key + $arg
+    !return $_list_foreach_value($list, "$__dict_foreach_value_callback", $arg, $sep)
+!endfunction
+
+!function $_dict_foreach_void($list, $func, $arg="", $keysep=":", $sep="|")
+    !$arg = "keysep" + $_va_key + $keysep + $_va_sep + "func" + $_va_key + $func + $_va_sep + "arg" + $_va_key + $arg
+    $_list_foreach_void($list, "$__dict_foreach_void_callback", $arg, $sep)
+!endfunction

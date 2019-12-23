@@ -1,3 +1,5 @@
 .DS_Store
 /octicons-svg
-*.sh
+#*.sh
+tmp*
+out.png

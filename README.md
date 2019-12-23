@@ -4,4 +4,4 @@ Various macros/includes for PlantUML
 
 ## Sequence diagrams
 
-* [kafka_topic](./sequence/kafka-topic.md) - create participant that represents kafka topic
+* [kafka_topic_participant](./sequence/kafka-topic-participant.md) - create participant that represents kafka topic

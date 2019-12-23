@@ -1,6 +1,6 @@
-# kafka_topic
+# kafka_topic_participant
 
-#### kafka_topic($id, $name, $key="", $payload="", $compacted="", $entries="", $dir="horiz")
+#### kafka_topic_participant($id, $name, $key="", $payload="", $compacted="", $entries="", $dir="horiz")
 
 Creates participant that represents kafka topic.
 
@@ -15,7 +15,7 @@ It lets you add the information what is the topic key and value and whether it i
 | $payload  | Description of topic value payload.<br>**Default:** _empty_ |
 | $compacted  | Is the topic compacted.<br>**Allowed values:** _empty_, `compacted`.<br>**Default:** _empty_ |
 | $entries | List of example topic entries.<br>**Format:** _key1`:`value1`\|`key2`:`value2_<br>**Default:** _empty_ |
-| $dir | Display direction for the example entries.<br>**Allowed values:** `horiz`, `vert`<br>**Default:** `horiz` | 
+| $dir | Display direction for the example entries.<br>**Allowed values:** `horiz`, `vert`<br>**Default:** `horiz` |
 
 
 
@@ -26,11 +26,11 @@ It lets you add the information what is the topic key and value and whether it i
 
 !preprocessorV2
 
-!include https://raw.githubusercontent.com/jrosiek/plantuml-extensions/master/sequence/kafka-topic.iuml
+!include https://raw.githubusercontent.com/jrosiek/plantuml-extensions/master/sequence/kafka-topic-participant.iuml
 
-kafka_topic(A, FooBarBazBooBa, foobarGUID, "{userGUID, userData}", "", "k1:v1|k-2:v-bar2|k-foo:v-boobaa", vert)
-kafka_topic(B, Boolaboola, bazbarGUID, "", compacted, "k1:v1|k-2:v-bar2|k-foo:v-boobaa")
-kafka_topic(C, SimpleFoo)
+kafka_topic_participant(A, FooBarBazBooBa, foobarGUID, "{userGUID, userData}", "", "k1:v1|k-2:v-bar2|k-foo:v-boobaa", vert)
+kafka_topic_participant(B, Boolaboola, bazbarGUID, "", compacted, "k1:v1|k-2:v-bar2|k-foo:v-boobaa")
+kafka_topic_participant(C, SimpleFoo)
 
 A --> B : foomsg
 B --> C : barmsg
@@ -38,4 +38,4 @@ B --> C : barmsg
 @enduml
 ```
 
-![diagram](https://raw.githubusercontent.com/jrosiek/plantuml-extensions/master/sequence/kafka-topic-example.png)
+![diagram](https://raw.githubusercontent.com/jrosiek/plantuml-extensions/master/sequence/kafka-topic-participant-example.png)

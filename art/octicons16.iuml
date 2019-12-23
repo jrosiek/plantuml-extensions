@@ -1,0 +1,398 @@
+' Octicons{height=16px} (https://github.com/primer/octicons) MIT License
+
+sprite $octicon16_alert [16x16/16z] ROp50SKW0CNm5it-qtujJcvFnPdxdgG6FUe4QP0Mm3OfeHIGLTyK8JBrKl7NzJ9K7NxIK3NcUvPfvC-be-SueHWrwcR2NxE-nS8R
+
+sprite $octicon16_archive [14x16/16z] Oq01RFn8W9qVMOeVbSU1ef818GbaOl8Wob3bgCXZHtOAAW
+
+sprite $octicon16_arrow_down [10x16/16z] XSQr0G0W402nmntsdnRlFrMGZ4sS6vyZl0GWdIGsLSOeYaEtfdcCGRG
+
+sprite $octicon16_arrow_left [10x16/16z] Oo0CM64CTdu8pSZ93s4nSVD303ClFmOB8GlLWJ05OJ91
+
+sprite $octicon16_arrow_right [10x16/16z] Oo08ME4iVdOuYv-J4KX203SJZCNFounWmMNXEc2c84mc3
+
+sprite $octicon16_arrow_small_down [6x16/16z] Oo00-FbX92i_4B0oSF3pSp0mCFBmC0B5cPa9wGS
+
+sprite $octicon16_arrow_small_left [6x16/16z] Oo04M86OaOEVWO6PXny882H812fB
+
+sprite $octicon16_arrow_small_right [6x16/16z] Oo00MC4aFmSZ0pyGy323IIQm25YM4
+
+sprite $octicon16_arrow_small_up [6x16/16z] Oo00c9c112CF3oC30mS_FmS3ApyGi38myFC3nK4a0G
+
+sprite $octicon16_arrow_up [10x16/16z] XSQr0G0W40F0u4xsdnQldwiENyQywDRqYIfaKLWIbxGIU0GuFWu05opYP1C
+
+sprite $octicon16_beaker [16x16/16z] VSc50S0W34JHIDrk_sbnIFsto2EK0ls4MdjeUpFEVivnDa_fcBXua3JLeNYvdXrgNVBMl4OgB0sUJvw91EU4U3rnPV8
+
+sprite $octicon16_bell [14x16/16z] ROl50S0W5CLmvsV_QUjUSdgg1gJuC072gNK5Q7ftXOsw6SU1Nrq-NLjVN2nFSpjxtivZkbrMbWTEddJrfq2vdId5R686
+
+sprite $octicon16_bold [10x16/16z] ROp50G0W30DJtBF_j3W_xjN6y8EJ7Co-dFELRbtp5RPxePPr2SJIpciJTiCQ6nXVRjddKdJtyZHxsMMcqotHuCi
+
+sprite $octicon16_book [16x16/16z] Oo04EFX1W9EH4qopC_23HH4K9X-e34PHNHwJpywF33XWpcPd80u
+
+sprite $octicon16_bookmark [10x16/16z] dSb50G0m30F0TCpnhtPO1RllPQh4hNUg4AYCuL45crIImm1sl0HUTrkhxVoJH1AtPh7PnW0L5W
+
+sprite $octicon16_briefcase [14x16/16z] Oo04sFdvsH4yVY222IC01py3d0raukSX04m2o20HeDgEp_a
+
+sprite $octicon16_broadcast [16x16/16z] {
+NOs50GCW30GF3rIo_xRzGFqWReZSRQsUEQJHKvXkRAnmA9DdMErY5Oh5B8ocWJP0EpHR6a4hsi42qtVRTaLy1SSLwF_L9qtp2jrDDlVuu4_HVeR4FJxP43C_
+z-N9PZpZmPDd_EPvR_C
+}
+
+sprite $octicon16_browser [14x16/16z] Oy03sFcH03i_0mI20JyQGDP61nwAopZm-G4
+
+sprite $octicon16_bug [16x16/16z] XOt50K0X5CEASyl-qwBVDUYpLdSWjZl2becnxvq4f4FCSXOodRm4tW02ZE-fTYzngsYmn5kmn8rh_Jf_qr_ylJnBy4C5
+
+sprite $octicon16_calendar [14x16/16z] fSct0G0X3C10TNQd_QVzIARam9cDFQU8VZbGm99nX7J_P7dxpSCRsotiaiaD
+
+sprite $octicon16_check [12x16/16z] Oo09C2AOBFmi22QOZM0omfXWPL0cX09Xc4fqRJ0EWaaO
+
+sprite $octicon16_checklist [16x16/16z] bSa52WHH30JHMeqWVV_JZZN16QclZt1LoWLEoEzuUZItYPdtju5I82GL72oG6QRz8LGcuNd9P2hpgXK
+
+sprite $octicon16_chevron_down [10x16/16z] dSR10S1010H0y3pqtss0TvA3tO6lWrlYd60NyM301SIDo08GL4qK1y70pJm
+
+sprite $octicon16_chevron_left [8x16/16z] Oy07s24K9pyxXE90eTWHab1n30Oxp1oS
+
+sprite $octicon16_chevron_right [8x16/16z] Oy09sA4KFoU4mO7CG4WXQ0uu1HM4cOCF
+
+sprite $octicon16_chevron_up [10x16/16z] dSQt0S0W5CN0nqSjQFzfdLqxN7Nv1UueLyQG8xDgIj1Ake8zsKjQ3YrlhG
+
+sprite $octicon16_circle_slash [14x16/16z] PSu52aH140FHaCxGmiZzJxk-NmjzQE6MelSGFZ5BD5NoZTNmAHQ1_44h4we_6agX3L1qRe3rRXl07je0XMe3IiZueoN05Jyi_iwClxFz-jOJ
+
+sprite $octicon16_circuit_board [14x16/16z] LOo55O105CEAEzr_MgGloEKqtrGms9BX4cnT4-YbFdTtnpICkXX7hRUDFtENoYwLR_-s6OYzC3EqJ44mf6KcmimX0gCAJW
+
+sprite $octicon16_clippy [14x16/16z] POu50e0m58NiLkv_MWjZWIxuRrLaLDDK_JPLrUIi1_flWCfo2PTzN5PyN6RwcJHVrfnY5HF4x3T3Hy_qbFI-7l6T1m
+
+sprite $octicon16_clock [14x16/16z] PKu33W0m4BiqC___sjbhTAZe0rFEATPdQCC0PZJg4dc_ybXMNPSOwwg96PeR6QROteeRzWOtjuAoTQQgMs5sbmx3Ua8Fr4_wqsot_f01
+
+sprite $octicon16_cloud_download [16x16/16z] RKm54i0W3DjgEFp_jLCSWhIHox43QM-bKUq8KFipKpRV49svmMz0SWeUroRuTK19m0wXDR6sVpYbF-97pfej0i3B0L0Yl7qFUU_VVzHy0wK7D0W_RKAZ8su
+
+sprite $octicon16_cloud_upload [16x16/16z] ZKo30G0n3Cn7TRF_j6-xp17-BFOvwWPzOYIVcnbA63_rCmuqVcZ9OQz6wr_cdY0rb4G3DECnwYF122S2Su-7PGQJBf4GSS3OvoiEVJqOpzWFUpyyuEVL0G
+
+sprite $octicon16_code [14x16/16z] Oo09i4C82E3WPmTo-3aWCloS88gJ7oJB1k90kAmCB20EZCk2oaDHYMuAmWPKsqa2
+
+sprite $octicon16_comment_discussion [16x16/16z] bSUb0S100C30Y4UL_QSjC_VSSIKxoyDbvl5PTNC1_hxOgsYHYOGgR4uGib9L2n00h84jzoNmf0K
+
+sprite $octicon16_comment [16x16/16z] Oq077Fn8W9s1WHzPaf_-V7QWCnXOeExXW8YoS3AWg4BbCY2uX04
+
+sprite $octicon16_credit_card [16x16/16z] Oo00sFbH03i_gZG_8O2k7fEFK8fR7hT-DFTnC908
+
+sprite $octicon16_dash [8x16/16z] Oo0JyAC1Siq1
+
+sprite $octicon16_dashboard [16x16/16z] {
+RKy55aCX34l3Mv2t_jx_jYDpmsD0yQzHAwVuW2FLs7GGeGtNYBlGXbKlA03gpcR0034D8TszP-r5MCreL9rCBYHjh_82vbCVkEaIdis0HpnX9Ft-7TsFp__5
+M1__p_5UtxhLTm4
+}
+
+sprite $octicon16_database [12x16/16z] hSkr0G0n509G8ExxJtlIHFgyvYlOoSNSMevEyCE90EM67wi_-Atbdwtrpt84GtnemhL_h7_iNW
+
+sprite $octicon16_desktop_download [16x16/16z] ZSc50S0W0CJ0htkp_xHrnGyDw0Hw_BfXSpQRXkS__ImvbCzxUURJAizyMkMHJpymDVziTHXWq2Fls7Iv75O
+
+sprite $octicon16_device_camera_video [16x16/16z] Oo00sFcXW1t4O-RYXmCWbmr88VXCtFp8W9MVCe3GZsa-mdwu-pWWxcCW4G
+
+sprite $octicon16_device_camera [16x16/16z] XOx50S0m3CHK3DlxRzlxb4a1C_17T14sC_W9cGY_CNTqyy4arC3kw8A-q6qsLL_b6h_MN_lVkUmN-M41
+
+sprite $octicon16_device_desktop [16x16/16z] Oo00sFbH03i_gZG_lVde0Crz711btFpyt0XDJ9mWAKucRFu3
+
+sprite $octicon16_device_mobile [10x16/16z] u-270dP-16200XgoG82B2seV5mC35mgB7IRB0G
+
+sprite $octicon16_diff_added [14x16/16z] Oq01xFn8W9qVMOeVZKSA1JCHbKUIAVZSWk9g3bGV0G
+
+sprite $octicon16_diff_ignored [14x16/16z] TSUt0O1034KnLmxLttzQCWykgPCrGZyX-z5YfNEahf5pX9rXPzWLTePXMEWdhR43
+
+sprite $octicon16_diff_modified [14x16/16z] Oq01xFn8W9qVMOgV88-5Yui5pcC1cS02ut61U5oOF8HAJ5E8jnt5rHoeFW8
+
+sprite $octicon16_diff_removed [14x16/16z] Oq01xFn8W9qVMOgV0XxCH0mUTMn0SJK7gey
+
+sprite $octicon16_diff_renamed [14x16/16z] Oq01xFn8W9qVMOeV6uyLXSVFZiBZvsA4yY3cyJ9Zy10gKKt1j06VMr1SpO7g8m
+
+sprite $octicon16_diff [13x16/16z] TSa52iG04CNGlrl7Sl_Rbj5wq4SaOMqwDPeMSfZ8OKga78He20UMuNxkq0Um7aSNB5Ihj0C
+
+sprite $octicon16_ellipsis [12x16/16z] Ow00iFF30GS_2c1WW21qDW8WwwN43G
+
+sprite $octicon16_eye [16x16/16z] ZG-30S0mh7QR_xzTC3isr1-miTPe5qzdOCYQNTEW65G5cg7iW29r1GPMOB71P461BIfW8wMe2Crmza_rvtcdVPTxjdkJ_VNQ1
+
+sprite $octicon16_file_binary [12x16/16z] Oq02xFmGm0bayqF5M3X1R3W7oERd1s4GXn_4WqZpex4X6Co60uW-X3WOeR3nw6NdXmCEP3S3
+
+sprite $octicon16_file_code [12x16/16z] VOpL0S0m44AfqljY_sbhSNsHKq06vR0tb-_jvdDV2Ab8EVJbntjzRhkN2kJlpR9VxdicEHMvaF4
+
+sprite $octicon16_file_directory [14x16/16z] Oy03sFb1W0FAuuUH41ePSF3J6R2Zs8xF3m
+
+sprite $octicon16_file_media [12x16/16z] NSY55S0W34NHfAUu_FsdnVrXDz2HGiyKWtg_gTu3Q0_TGBzUhu-FjurQ_W6c_w_c0AWV-8ibHZ_ErAQcemm
+
+sprite $octicon16_file_pdf [12x16/16z] JSW55i0W30JH3HPxxTx_j7LXi4ymDNZdXtcSkWYQt-uiE3wN6-My_NIz35xpjNpEwg-BOgZ8PHEfGIw7MsglfMgImOuxaeRFBf-LNugf7G
+
+sprite $octicon16_file_submodule [14x16/16z] Oy03sFb1W0FAuuUH41ePSF2Z0qQ8AaO83weQgey1oa2M8v77ZipZmES7
+
+sprite $octicon16_file_symlink_directory [14x16/16z] VSm54e0m44FHuCw__sbnCXdhgtT51GEtKI-ytqWZ5fgLeCfPSwrBnsEHujNMm-9CsXrgTvcmWJ2gu0G
+
+sprite $octicon16_file_symlink_file [12x16/16z] VOor0G0W30HnXzz_MbnISLNonWWM2zzli8NowpxFklbyrftaY8-RIq2lMs5WnYrWrT4DVtcnTyQz-DqM5yS83G
+
+sprite $octicon16_file_zip [12x16/16z] Oq02RFmGm0bayqCn2oU8XdDWuc0EL1nCmiH151vn9duk9XWRQ38NZ0so5ie60mmsEpySi2Ex6G
+
+sprite $octicon16_file [12x16/16z] Oq02xFmGm0bayqF5M3X1R3W7o0QfW71WuY3bg6oeGHIB8zZi_730WUnc
+
+sprite $octicon16_flame [12x16/16z] HSw52G0n44JHcRWi_FwxFSuVbgphPFrg_j-5zBqxxNrcw7AwAw0epfuAR9b-FwaoE76Akg1r69lB2i9nl-UcASSwlwrHTTfWnxZUZIAbvVCzxlE-kmu
+
+sprite $octicon16_fold [14x16/16z] ZOwd0G1H348HlqMn_xIf2dNtJ7e03OdcgrfCLcMNDAmgZ7pBUjeJMvXoYjaTBg0plTEVglVVfn8
+
+sprite $octicon16_gear [14x16/16z] ROw55O0m34I3Gvjxj_-srFrNuY8BhCdQxYxfVszGRoNnm7isCA4-yo4EaGEyVIRe36SIkrYI4l2vsbf6TisPwaVSkSlZdMK2mdGyoh32FcuMC5OM_
+
+sprite $octicon16_gift [14x16/16z] Oq07p9oSJ2226SpZOc1WOs5ZOE04ypY0c1jAi_CZ03i3FqWQIlAXyv007rIO7o95FeyToN9y
+
+sprite $octicon16_gist_secret [14x16/16z] XOkr0G0X40GNXqkc_suVZTxcN5O_kEAwdodIYMUgTEgpYabNVXDIKeIeb88oE0cw7d82BxzJwc5Aa6JWHyeDMXxhBou
+
+sprite $octicon16_gist [12x16/16z] Oq02xFnmmCwF4ER7nsO78YYRauM1WOKJp6O7YO58X3Y6UiBc8xc7Wm47
+
+sprite $octicon16_git_branch [10x16/16z] NKo54S1020llo3NxJrltLwAuLz8XnwJ0EAQn7ncQKeJiGC7fz1oJXATZ0WUEgREi4vkHYdLQbzLrI17zRjPZqdjAgWc_jG
+
+sprite $octicon16_git_commit [14x16/16z] Ow04i75niS4vNFnSG0JbiF8pCp0myxC2cVn0m0LH00K87gfAX2ceDb02
+
+sprite $octicon16_git_compare [14x16/16z] dOw55S1034A9r8Nzj-qZ9mFqdyP19o5itqq6ozfh9yaZW4ExB39WzzqpdIT0ZYxajF37occTT51cpGgA73hYaDKr2kRGBsGK7m
+
+sprite $octicon16_git_merge [12x16/16z] RSw53GHH549HlZzBwB_QtN6_iHC5NCegURS2ibikpX45UwHSp7xQAHbPD4_681c0paOPTdWgY-OSaIvR-lKXgoHyz0S
+
+sprite $octicon16_git_pull_request [12x16/16z] dOj50WDH34BVTrBZ_gUjiEfwua58pCocwapd5jIqNGCAzBljGNiyekc-WHrlTcuktUtnQ41sGK562GGPQb8qsN_n0G
+
+sprite $octicon16_globe [14x16/16z] {
+PSct5KCn3CLGC2avlFstjSpstmu7FFWOuK4pXuhvtNR3LM24zBsvvLnBqYRL5VgB9KrYxgxrbfHUg_FrBvtObRVFKbj0dP5gnJMItVKsi0skDc4xD_kcBQVb
+UhyzUFW1
+}
+
+sprite $octicon16_grabber [8x16/16z] Oo00-A60F772
+
+sprite $octicon16_graph [16x16/16z] usT01KJo-Vb9vOCn9XzCKu-FwLuqm806
+
+sprite $octicon16_heart [12x16/16z] ZSg54O0m30NGVn33zv-stkO4UvKedj2wKllfIfZpJ-irh9ldktgka-SpfAS2m6fgoBGievAoq13XhmW
+
+sprite $octicon16_history [14x16/16z] PSu53aH140BH2g7_-FJzJxlkMp5U5Fvo7RFwjj3ebjoR88zbRaMAp08FjelIJ_R7ockuJhsb-HHmKVLRhkvlTTFYgMYWZBiYnONj-UpvUivg_Ze3
+
+sprite $octicon16_home [16x16/16z] RSm53iGm00F1RUM3yFzVUs0Lawnm762UT6S8ehMJ46JlX63lz73I1G5Ai9U4MZwTco0kEvS8y5m1_xq-0QJT4bxj_IR4tH7tQbjlnhu
+
+sprite $octicon16_horizontal_rule [10x16/16z] Oy0B-268dnz8mH221GHuPB6QXmNWTm4
+
+sprite $octicon16_hubot [14x16/16z] XSh50OKm44NH6_Uy_glz2imEJcIK1x7sNYC_eGKBeNAe0TUvT9T2qQ66r14vytsYRvJvrs8BsqJ279LqHZ0gagdSU0C
+
+sprite $octicon16_inbox [14x16/16z] bSe53e1G30FGRj_z_gV5eLcS5wt0YcC-HWGgXmh9J5aqC0Lrdicxe4mQaZ19QW2rjReyIr-dTAUq_Z3l36C7
+
+sprite $octicon16_info [14x16/16z] PKw54S0m22HS16V_QUlUAFO2lrN9dUeUeqX5h2Au9jdsQiibbJKPOqq5gi2PWLIgJpR3jPLZpT2s33BtZEgTBJ2vCwd0gqAFlYZmIxqiR-7T6PTJHvKg_DOC
+
+sprite $octicon16_issue_closed [16x16/16z] {
+RO_50KKn3CEKb7d_QJyyXkeMjCqC6skDbWrDsQhQN7GjXzkskW2aVpa68CI0pQorW2z2j6ijmxecK7MjiMCebnfhCApx6oPo_WEAlUcvTFFZXfv-ZSr9ftdk
+V04
+}
+
+sprite $octicon16_issue_opened [14x16/16z] PKw53G1126kQSu7zftstvea1LVmcb35AE7VM5iZGAlV3u_cDlfrrFzptio8qt1TQAE6yBZU-5uTU9NnprKKJD5sRQMkT5G
+
+sprite $octicon16_issue_reopened [14x16/16z] PKw53G1126kQSo3TVzftVzmfVfIQUKjR1Df8P1gTW4gaVIABa2gms3NjYrSwCenzwiXISzuP_PsrzFeypbxIOdi-9-jYgNnCHH70lYCp8Xr_h2NyQ0O
+
+sprite $octicon16_italic [6x16/16z] Ou01PYuc8Cd6pmpYCCA5cVZPW2GBFmjO4gI4Ynyapi-5In8L
+
+sprite $octicon16_jersey [14x16/16z] bOo53GCn4C3ypF7-srPXKSd72AWJaqf4BlNcZiNmiAeRnn2has6xju4jLlD6PfdZQ2GIim4N3ezaamWMuR-gVibLvtErsTbU
+
+sprite $octicon16_kebab_horizontal [13x16/16z] Ow0gOEPYHX1S_5mC3302HOQ1TW
+
+sprite $octicon16_kebab_vertical [3x16/16z] Os1WOEPYvk87OcOWco0N
+
+sprite $octicon16_key [14x16/16z] ZSc53O1G5CNGYyFJ_QV57RuqUbByrXAr9zYzx_auCu1-lxI9DedFx7rJxLlj7No1wNPgu0Jm0soulHfPJG
+
+sprite $octicon16_keyboard [16x16/16z] Oo00sFbH03i_gZG_FnWX8AOy4WGX_9hviPiF0jZbqTp7mK0Y
+
+sprite $octicon16_law [14x16/16z] ROa50WGX3CG6T-R_lptQdky6IoXkgFKh0XckCtCUh5L8_G8S7V2M4ekKYIie3ficHrsHKkaaEnQXulivKYQ2r8TCveyBqdyy
+
+sprite $octicon16_light_bulb [12x16/16z] PSg53S0m34JH7qQf-szRNnbUm8X9TTQ4-1uSBdGFhZj4CGTs8TCvzMV-sd6DNNDeSBJ13MGuJ8px9wuTsx88VzNQbPqhipXW1G
+
+sprite $octicon16_link_external [12x16/16z] TSO50e0m3C30u4x-_rhSsRArFI9LAkHkiPK_J7UxiTkyiI7VNTa0-MQgRU_cQsEklAg9D0C
+
+sprite $octicon16_link [16x16/16z] Oo0PC77o0m4d4upBmGYY63cW0Y0kH012yq1KWHZydCnGUIPEe3wm9eX-8Ct91DN4pCaFqiI4q8rfAC9IT4UH2W
+
+sprite $octicon16_list_ordered [12x16/16z] RSl50S0m30D0XS6q_xHbRkvZ51wIFeQb9zlGiy_MC9ARluUGhd_NtDdtpkDigl4nt5c42j8DvHOnCWC
+
+sprite $octicon16_list_unordered [12x16/16z] Oy01kBc1c1yCk97PgAe6NYy
+
+sprite $octicon16_location [12x16/16z] JSo5hGHG24JH0pnZjVzglyic4ncxg7ExdO8uAybrWawWZZ5HXJawMC_d8lg6-_Dvn-qrd_MxhvK7uAITG6wYWGxC1Mk2Bgg1kCQ70DcTm2-VTm
+
+sprite $octicon16_lock [12x16/16z] dOp50O1G582mzHVxJsldLLudAtq8FGVH48nxsjj2upu9uV6Eh8n-yy6RKRbGyPN_xh__ys81
+
+sprite $octicon16_logo_gist [25x16/16z] {
+dOr5WWCm4CFa2SV9_l-tM-PJgwj1_40UU_R41xKBb64BhWY8oPN7I0EecG_EmGYkJ8ZklquQUmmj0H412opGTN4ArDhIATYVL-CSb5dIg_mQG6Jh4iHu2Q2b
+Iq1hkWG60HOOWEBbMQ1KcZqJaDpvdWC
+}
+
+sprite $octicon16_logo_github [45x16/16z] {
+jSu5eXuX40FWC0Q3_Bd_RSlIzhbBrhCVWb-Cj34p2b3-5SNigatlYFg_z-19mQ1iM00b0JZp3ZV6UGevJCs1kR6nluM3juAJ8dWF9-k_PWonJWxVM4M2ULMG
+CJRkIHec7QMr5jYaSISsFichWf0RSqooh8s5P3j_dEDiOywv7k409grVJsd_yECzFyQD7Xm0ucDOoIPIx_1yZ1rwS3tRGEMLVrZ8vVSuoSM3kIPP04toLWMP
+iicYIoO0omhfd3KIaPQSYj_B7m
+}
+
+sprite $octicon16_mail_read [14x16/16z] LKs55GDH20FkkxpilssnMd0DELgZ3tW2aoCVI7IhO2uJsI0Wggt5TmOjR6RUmm3dPqr1vHOhgWRRuB54rc3RJSfXCMPJPEQi7Blp08ps_ja6Edumw0yl
+
+sprite $octicon16_mail [14x16/16z] ZOt50SGm40DbU_4kYVglDem_p-AyX6wSBvoA6oN3B_4WeLcmKbAn6jgl0dLRcw6EhOqLXpKlcSNRRchOCLqjz0u8Vj83tIm
+
+sprite $octicon16_mark_github [16x16/16z] {
+JSk50SGm30J1KumoRV_LFeJ7ADAFfJf6JQP3MknMsiF2hKXArE3qZeTAaYsIJebbYNTCh62wG1qCtJgZWsxG2smwRL0YDDFE7A9cp3ERP7d2bEAmb8zXY9Ao
+R_l0WZslEDdhC-eKxqjV
+}
+
+sprite $octicon16_markdown [16x16/16z] bSwr0S10581GuXxsdpQkrtswrq6moby9dHGgAr3GMO6Ql_cxe80Me3qy5XDOGkLX5JJFtVpM3pgbFmHR0G
+
+sprite $octicon16_megaphone [16x16/16z] TSxL0O0m301HtE7stvRKDVVtgXcKncFFkLmJITCfC1vtemECHViuR3TuYuRDmDjqPqQgzwlxff7yVGdo_utB-Q2OtrZj1m
+
+sprite $octicon16_mention [14x16/16z] {
+POw54GCn3C1a3jxlFssPgu0P02JwccNSY6c2Q2k0Ikv4GIHFkia4DBiti787dIQjhhBfDGCyGDO4EO0qqBQl2K0NI1-274PinUOjmrStswlBBUsE05JnITxN
+JEveZZrI-UCC
+}
+
+sprite $octicon16_milestone [14x16/16z] Om03Vdu83UTX0npySC02L0G2K8e5ZSUEh18JWDJHYmS
+
+sprite $octicon16_mirror [16x16/16z] {
+RSor0GL124NH2pjEGF_LhenzVH47OqIByfPKlAGjRG4dD5r3uJPIuZEi0ReXLCK4GdS0iLxq8TxRVdCb_FhF_jk_QGZFSFkeGK8zfhN4Fej57-SaZ4ZAJkwQ
+aNm1
+}
+
+sprite $octicon16_mortar_board [16x16/16z] fSlL0S0m409GY3lxJrk9BD2-lpi07z36CQBTXqlQaYEYvabgYc2esh8dW1xUoIo_Z6fs9EZolAsYf58apTl9TKtzt0obznAu-nO_t
+
+sprite $octicon16_mute [16x16/16z] ZKx50S0m48Awi_-qTOk7tnsAB5IjUKhMAUlSxvPWYrONm64eXe5wxlsXWR1lMs_dsNtFmzcRYGq
+
+sprite $octicon16_no_newline [16x16/16z] hOt50S0m30DLCWJtdpOC0pJtiqNu3Hb3s9W788l22yH8vRmzKJbZlKqzRvXoDamxror4zNo6ls2fd6RqxRrJP
+
+sprite $octicon16_note [14x16/16z] Oy03sFcH03i_iXG_1W-c3hSSRdrG7ZuRKDp2mK0q
+
+sprite $octicon16_octoface [16x16/16z] XOo35KHH34JdAVvd-gzsRTwO-8Vum8NX0WJfbjkMvcG01t_7t-h19uOzrrgiZWlzK2G7cZMSt60QWSLrSRHvg2VdnHqi3c409pS3Q2xzyawydQDvbTkf_yeU
+
+sprite $octicon16_organization [16x16/16z] XSp50G113090rZtqN-svwxo8uYumuC2Jz8Ts6Ugyjr67KDVs8CzXRW_i4EpSJik3ihVtHtCRYQEujXsF4WfFNE19mMnjU_pe0G
+
+sprite $octicon16_package [16x16/16z] ZG_30GC1BEOZ-qzRkwVOW6L0nW_RIaZSRZ5nPSs-EgGkCAbq2RDrgkR0uCKC8OaPnej_7t6rB-R3XwlwzGc-VJZaIuNIlL-pv7vl-_ZrnAz_5k4C
+
+sprite $octicon16_paintcan [12x16/16z] JSq72WH124JHhmvTtOjGzx_jCdaUoInGwbQnan9IsiEDmoPAN5JA6gjxZKhrN1KGjMRRTspBUSwa9-Qq1uuzA6AF3J-CZpXYZyxOlkFXom3kl_3r1m
+
+sprite $octicon16_pencil [14x16/16z] dSgt3K0n549Hf4VF_jF-w9njkgCBEZDBG8cPv2lvqf8R6V0oujKn84IyGaHIwjq
+
+sprite $octicon16_person [12x16/16z] NSor0KKX5C3GYpliFosMho_LgIAFN2bEo8wTnUauuNfSSJxEE1v7R8wDK1cZ81N6BYZkP27P_3LyvR-CyjC2
+
+sprite $octicon16_pin [16x16/16z] POk54S1040BFuaB_rSR3sxukDmXHAK6KFfI1pSY37ZUH3O5vW8g2s3EBN_j76SmYHM1qVvoggqVkepuLjj_xTotUXXC
+
+sprite $octicon16_plug [14x16/16z] Oo0PyFF3M8nS_Fm87Zi_300vB30MYCq55GTps93bk53qyQEOoO-mZm8
+
+sprite $octicon16_plus_small [7x16/16z] Oy0F-34eVWZ08aSK
+
+sprite $octicon16_plus [12x16/16z] Oy07-Fd9OlFZ0EIQYGy
+
+sprite $octicon16_primitive_dot [8x16/16z] Oo08sBYus80KDpyGS3EmyOC16nU4veBHC76eEfW-WW
+
+sprite $octicon16_primitive_square [8x16/16z] Oo00-2a4XCm7
+
+sprite $octicon16_project [15x16/16z] O-D71kpy3CY0dn-8u9ZkN230muK232wQ5zXHFGW
+
+sprite $octicon16_pulse [14x16/16z] XScr0GCn44JH4RD-_zMQVRUPNZIWasXBgBRrQI-GtByryEhrkWWPcYI0IgStlge7l2gWDqYwZIQZEDjUvUm9
+
+sprite $octicon16_question [14x16/16z] PSu53WDH20JGAVqEoTp_jaNg-w8uk6ZBR3KasQU9jBCb0dQaJW-t1_UjtSEDTZoW6y1fCRq9K7ER8742OXKjpbj4gttVRGUEX3ijBrJKzz_rlyy-Nryy
+
+sprite $octicon16_quote [14x16/16z] VSY53GH1509G67Vwh_PqtRxm4l0yB6x5I6M1NH4BMGaBHk9A-7OBIM53LVPSQ98QKV_a3x8pxekPGP8I5a1YOJzl
+
+sprite $octicon16_radio_tower [16x16/16z] {
+PStLOKLH24JHFK2k7Pd-gyrpNryuf7XI8WUwPyJKib07LC5HBCkHx4dPHUxayPr_psi60Wb4MBT_rLlT_jqSotBm4ivqyBHOUE6fUqxtPvekA2Ttg-UPDsuq
+_W1gY5yd
+}
+
+sprite $octicon16_reply [14x16/16z] XOw35K0n301hO_zflt5vwXKnr8bJm4rXJ65Cgs4SP7iQUhv4n6Wwdyx_xwdZR9mNfkKkCIYW4mpiksO7
+
+sprite $octicon16_repo_clone [16x16/16z] ZOq52i104CIcNdJ-_zfQ81I_d8Qrin2Uemtm-I9_7u-3SLxZOV1fFBp40HVY4PoU-b4v0pqQWFLPSWC
+
+sprite $octicon16_repo_force_push [12x16/16z] bOh50S0m30FbCj_-qpOCtnX51xLsK2aIdkUAxNciu0EEZ5U0TI2ZU8aLSFnDx_7UCeUQhXux
+
+sprite $octicon16_repo_forked [10x16/16z] LOw50O10482mM_UVri1FFgw3H3FF3VupXBj0kCs-D-1_NO3_SlNGNmkgAgeg8QdMGWkniypUj4J90m
+
+sprite $octicon16_repo_pull [16x16/16z] RSsr0S1034DH5qVTtt_Qe0o1rnar2TCEO0xLHDqqTpIV8qtpMlFQT_uFh__pavhEQo3hILY-Dx6gMSjY1m
+
+sprite $octicon16_repo_push [12x16/16z] TOg30S0m44LhDs__QMFZ-7KHwuGfbD2OW0SwMBIk4S_VDmTymUNn3h27lBtOCjZ-fEVuJ9bhIlgKOmK
+
+sprite $octicon16_repo [12x16/16z] O-U70o2J0GRuWMn-69iMuYY00KaSeOuVoMqSO3v28GiGWW4
+
+sprite $octicon16_report [16x16/16z] Oq03xFmeW9qVLPgVds8Q2iXKpyuF4kA4kOy39CR0oOAY1i95y56v32XS
+
+sprite $octicon16_rocket [16x16/16z] LSp50KGn24NH23hs-gzsla7axau2bBLAkf80ckBUW9gg3Y-D1jy0l9VCSSL9kUbnDNhNOFmcYM8tiyjbHaOo7LkR0TeTp2OF
+
+sprite $octicon16_rss [10x16/16z] VOp50O0m54FhBljl2o_8iVwZvhX6JUuThSzLiq0DloVVuyYU4OFBMGPmOCoE4ODFJGRatQZNFQuB
+
+sprite $octicon16_ruby [16x16/16z] XSo53G0X40NHyuCO_LUB3ou_-cO9ntwFYdi29GVvPFgpVA1r2AtRztm02P002P002N0t0m
+
+sprite $octicon16_screen_full [14x16/16z] Oy03sFdv-I4i88C3oeG9014CeFD0qd1b3CJpy9c9QZkgo_3v0G
+
+sprite $octicon16_screen_normal [14x16/16z] Oq03_706Ee-VdmF6u-27Ip0Wn800hWR2WIc3q3XuK81c2Yf0jnsFEz4
+
+sprite $octicon16_search [16x16/16z] ZOw54S0W34N3uT7zfwsZPtre_CE5pypPGoDpz3voRcPnz-FAw_1ycO-3_HEEhIu-2UoRxNcpQS_V-wtpPDKZLbgZp9GzbEPe_71as3W1
+
+sprite $octicon16_server [12x16/16z] Oq02xFnmmCxF08LW184G2JZWmA6N0qazpVK2
+
+sprite $octicon16_settings [16x16/16z] Oo0C-144RZu32f-3dv-V0niVqsHsP2a47w690SKGkDN4kOyW
+
+sprite $octicon16_shield [14x16/16z] XOg54GCn30JNA7ZglzlCEJGGM8Dq0517nAZQIflxjTXdAzS_9jXR0NnJzcnk-dRObt3z0uQcD_q5YcOZhnS9zNoAim9DKg8XIaX4uK5txuWR
+
+sprite $octicon16_sign_in [14x16/16z] XOo34S000CHIkzb_sjhCyKdcIWPe5Z3Xf5QzAeNae89SO5Mr4tUrDcylg-9NrQxaG90vmCgWLxLgcEW1
+
+sprite $octicon16_sign_out [16x16/16z] XSp50S0W30NGUd7sdnQ9Nf2FlY0cS_wZfwtdWJioLDGGzAk6P7EASGtNn7f_-XzCMmTmQld1vw__7r9HOKNt5G
+
+sprite $octicon16_smiley [16x16/16z] {
+PO-50GGW201fiFVVzgtlCsc02MhK6efmq6wCoDPrYvu9DfHzMJEyo0hOwIrJHxNfqkHU9i40VRHxSLHS1VHUMAVyPihJFuzBclupdptb-PLLBuuOgzxkXxqK
+vzNFNxz_yqnGrhooApy
+}
+
+sprite $octicon16_squirrel [16x16/16z] {
+TSk50GCm20J09-xilstXwtPH3F-4EaTvXb7Tz5yLkuTIGUADfJImXObnYqL9cbrTDKE2JsIBY_sHMofUihZ1IPaMhsLN01MzgGo3tatGUjOfti8T63O6gsV1
+3nS
+}
+
+sprite $octicon16_star [14x16/16z] VSo35KHH40FG39wH_gjTu_iU3OC38bY8SRaYPR4YFqjH2tm8fWBZWa47FuO2qFvkkkB9tvt_4fy-gOMibIplRZO3l4qyoUV11PVk
+
+sprite $octicon16_stop [14x16/16z] Oq07BFnWm0BXS484ELcW71WNok7dXt2158X71WK3c7AeDg3OZk8oL5UZ0m
+
+sprite $octicon16_sync [12x16/16z] TSW52WH15CJGKB_TwlwdNTz19zWZtAVIMn4PA3wjRmz3ytimRCMNgjDH5rUp_XLI_5qdLwk6PzMRsP8zlYpWuTtRUPECIkj5tFS4
+
+sprite $octicon16_tag [14x16/16z] TSk50S0W30J0nntsdxPUF6WkWccPuBqJFqHx0O-I6prIR5MFViIXfp03PMD0HylHUEDZ0o1CmytGGAmJ
+
+sprite $octicon16_tasklist [16x16/16z] fSmr0i0m20LGT4a2__wdhNkNobjmQA9EHmhmcW-904eLeseXaaEvree8wFbMpy-KxYfczLQ_ylzV3m
+
+sprite $octicon16_telescope [14x16/16z] POm75aCn2CES1NJg_gVjSlTNbl80wm4obYtHF-Kss7qA1nNJtW-msccw072KsGE7QLyjtwv9jA6MpTySKYjIRzR0HUU8zYwE9VGkLXDoqU3d2W
+
+sprite $octicon16_terminal [14x16/16z] Oy03sFcH03i_iXG_1e-P1KMEamN1WtCnUGWEmXIGRK0IdtqeBkF0vmS
+
+sprite $octicon16_text_size [18x16/16z] {
+bOx50G8n44KdxddzTqiCky1kTEoBt5eQx7V5KTC9hLkz6ZrgLs166ciEpE1dvD32XeKkVKIbYiGD8qX0QRo8NR01df6ZbLA9en8fgP0BOQmwO8hglI-ihlW5
+SCiTTkl60T8ZqXnpw_-_7W
+}
+
+sprite $octicon16_three_bars [12x16/16z] Oo02SFF30JSoc_xgCG4
+
+sprite $octicon16_thumbsdown [16x16/16z] LOw50G0W3CEAE_l_Mbo3pek6Y3Jmce5xelPCX4Kp2GSF-cp3Vrk9tnRgjvdndmtVvmLvudxSMgDXKmuS0zqp4YvXY7c5WUl7Ze3cRvnnYmVk74Ed0W
+
+sprite $octicon16_thumbsup [16x16/16z] LK-55KGn20kfouFzfptv2gb6Ak04nn0uJ4dTymrKUXzWTNoTsesQVvFUJEeH7QgBd6OhFyxwKVFtME3I8aybyf8YRvo1Bt2gLhdeLLDQUc0KmHS
+
+sprite $octicon16_tools [16x16/16z] {
+HOs55KGX30GtXhzB_ztU3pheB1A0ZB795BDwNbgy8aWkIzsp8ZPvQwDk91wUF-q4zQ0SNNcZT1HWaHot1k70D48VHOs5y1IGToD_Ih_xORQOPLUWbe10ep1G
+Al02OiD5X-4F
+}
+
+sprite $octicon16_trashcan [12x16/16z] Oq03xFpy_EmW1WS_682v_71fVg026E00Sk6GLcmWWDBiS6kH0G
+
+sprite $octicon16_triangle_down [12x16/16z] Ow00iF330Gk2muAGOK4eOq7eOK4O06HI2
+
+sprite $octicon16_triangle_left [6x16/16z] Oq07B6227qpmWmb-CC4F920aL0Gk2wOWkc0c8
+
+sprite $octicon16_triangle_right [6x16/16z] Oq02B62IdmLCWYb-CCKFflZ1589aWSkom7K12JG
+
+sprite $octicon16_triangle_up [12x16/16z] Ow0KiB0WcFpyB0Wca0DZWZaG9fG3OY8u5
+
+sprite $octicon16_unfold [14x16/16z] PO-r0G0m20I_Y5Q__xHnGIwA0nOXu1F880KfWjnldlefpRU4-cqrO8j7cBw736YRZjCvVptTY-_pp-3f
+
+sprite $octicon16_unmute [16x16/16z] ZKw30G0n44jgT_zftsPz2j2sb1rViQMrZf_MMphajF1SqY6Ni59gs36PSYCiFUgQ8o0E-vYd8J_EExeZdv5ItVNkVkv-trSF
+
+sprite $octicon16_unverified [16x16/16z] POz50iHG5C92fz_btV-qK_Ti0ZjWHJ6A4utDh8rYnTc9OyPk09gL1XZA70JZgd7WDuSHjLczsxZsfcWh7fN5SU-YhevgTgE9SGsmQWJTkpvxFdi_Vvv_9m
+
+sprite $octicon16_verified [16x16/16z] PO_50S10408XxlHVRSvzVgi0F3mE8iFbbTubTbPbLbUh0W0LEQTB19PKkj42lhd4gPU7TFACfNJOUWBsMEhWwsQfV8abtJeMW0eVF1py37w7F6rU0m
+
+sprite $octicon16_versions [14x16/16z] Oo0HiFE30JkOoS0F1I0c0v07Ki4FfCZXePk2QWF4TWu8XuDuzm8
+
+sprite $octicon16_watch [12x16/16z] TOx50O1040FdD8ltNotkSFDQJG9ec14hmygdDddmigMCh4GZ25WF5EIFsglXg6csUXYMUhrPyGewQeMxvkLLpdDaNauc
+
+sprite $octicon16_x [12x16/16z] Oo06i712Q4uM8EO7Si0KX8GI40wO2UN0cGWsGWsgNeIPA7OH0m
+
+sprite $octicon16_zap [10x16/16z] FSR50G0X00InFSMX_shn8QzekydBNa_AIn8f7oaN6TuJTHVHJvJ8I-J9_OgH1W

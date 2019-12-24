@@ -1,0 +1,19 @@
+' Entry-point for the plantuml-extensions
+'
+' It let's you to include various part of the plantuml-extensions
+' without hardcoding URL to the GitHub repository. This is also a
+' potential point when some inclusion optimisations may be employed.
+'
+' Usage example:
+'
+'   !preprocessorV2
+'
+'   !include https://raw.githubusercontent.com/jrosiek/plantuml-extensions/master/puml_ext.iuml
+'   $puml_ext_include(art/logos16.iuml)
+
+!preprocessorV2
+
+!unquoted function $puml_ext_include($relpath)
+    !$baseurl = "https://raw.githubusercontent.com/jrosiek/plantuml-extensions/master"
+    !include $baseurl/$relpath
+!endfunction

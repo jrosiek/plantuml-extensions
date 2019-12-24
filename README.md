@@ -2,11 +2,7 @@
 
 Various extensions for PlantUML
 
-<center>
-<img src="sequence/kafka-topic-participant-example.png" width="100">
-</center>
-
-
+<img src="sequence/kafka-topic-participant-example.png" width="200" align="center">
 
 ## Usage example:
 

@@ -2,7 +2,9 @@
 
 !preprocessorV2
 
-!include https://raw.githubusercontent.com/jrosiek/plantuml-extensions/master/component/kafka-topic-component.iuml
+!include https://raw.githubusercontent.com/jrosiek/plantuml-extensions/master/puml_ext.iuml
+
+$puml_ext_include(component/kafka-topic-component.iuml)
 
 kafka_topic_component(A, FooBarBazBooBa, foobarGUID, "{userGUID, userData}", "", "k1:v1|k-2:v-bar2|k-foo:v-boobaa", vert)
 kafka_topic_component(B, Boolaboola, bazbarGUID, "", compacted, "k1:v1|k-2:v-bar2|k-foo:v-boobaa")

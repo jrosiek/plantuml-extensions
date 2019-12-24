@@ -1,3 +1,3 @@
-[submodule "art-input/octicons"]
-	path = art-input/octicons
+[submodule "art-source/octicons"]
+	path = art-source/octicons
 	url = git@github.com:shgysk8zer0/octicons-svg.git

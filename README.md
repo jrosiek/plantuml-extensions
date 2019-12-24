@@ -2,6 +2,12 @@
 
 Various extensions for PlantUML
 
+<center>
+<img src="sequence/kafka-topic-participant-example.png" width="100">
+</center>
+
+
+
 ## Usage example:
 
 ```

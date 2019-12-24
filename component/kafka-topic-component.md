@@ -42,4 +42,4 @@ B --> C : 2. bar
 @enduml
 ```
 
-![diagram](https://raw.githubusercontent.com/jrosiek/plantuml-extensions/master/component/kafka-topic-component-example.png)
+![diagram](kafka-topic-component-example.png)

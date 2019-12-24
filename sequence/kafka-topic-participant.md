@@ -40,4 +40,4 @@ B --> C : barmsg
 @enduml
 ```
 
-![diagram](https://raw.githubusercontent.com/jrosiek/plantuml-extensions/master/sequence/kafka-topic-participant-example.png)
+![diagram](kafka-topic-participant-example.png)

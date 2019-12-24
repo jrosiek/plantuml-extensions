@@ -1,27 +1,32 @@
 #!/bin/bash
 
-d="./octicons-svg"
+module="logos"
 
-#tmp="$(mktemp)"
+here="$(dirname "$0")"
+cd "$here"
+
+module_singular="${module%?}"
+
+d="./${module}"
 
 fail() { echo fail; exit 1; }
 
-pngdir="$d/png"
+pngdir=".build/pngs"
 mkdir -p "$pngdir"
 
 
 for s in 16 24 32; do
     #s=16
-    out="octicons$s.iuml"
+    out="./${module}$s.iuml"
     : > $out
     for svg in $d/*.svg; do
             name="$(basename "$svg" .svg)"
-            ident="octicon${s}_$(echo $name | tr '-' '_')"
+            ident="${module_singular}${s}_$(echo $name | tr '-' '_')"
 
             echo "$ident: $name :$s"
 
             png="$ident.png"
-
+            trap "rm -f '$png'" EXIT
 
             svgexport "$svg" "$png" :$s || fail
             mogrify -background white -flatten "$png" || fail

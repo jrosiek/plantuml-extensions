@@ -1,6 +1,3 @@
-!include https://raw.githubusercontent.com/jrosiek/plantuml-extensions/master/utils/data-structures.iuml
-!include https://raw.githubusercontent.com/jrosiek/plantuml-extensions/master/utils/images.iuml
-
 '
 ' Create participant that represents kafka topic
 '
@@ -12,6 +9,10 @@
 '   A --> B : foomsg
 '   B --> C : barmsg
 '
+$puml_ext_include(utils/data-structures.iuml)
+$puml_ext_include(art/octicons16.iuml)
+$puml_ext_include(art/logos24.iuml)
+
 !function $_kafka_topic_participant_entry_horiz_key_callback($key, $value, $arg)
     !return " **" + $key + "** |"
 !endfunction
@@ -25,30 +26,30 @@
 !endfunction
 
 !unquoted function kafka_topic_participant($id, $name, $key="", $payload="", $compacted="", $entries="", $dir="horiz")
-    !$keyico = $img16_key
-    !$payloadico = $img16_binfile
-    !$compactico = $img16_history
-    !$kafkaico = $img26_kafka
+    !$keyico = "<$octicon16_key>"
+    !$payloadico = "<$octicon16_file_binary>"
+    !$compactico = "<$octicon16_versions>"
+    !$kafkaico = "<$logo24_apache_kafka>"
     !$attributes = ""
     !if ($compacted == "compacted")
-        !$attributes = $attributes + "\n<img:" + $compactico + "> compacted"
+        !$attributes = $attributes + "\n" + $compactico + " compacted"
     !endif
     !if ($key != "")
-        !$attributes = $attributes + "\n<img:" + $keyico + "> **" + $key + "**"
+        !$attributes = $attributes + "\n" + $keyico + " **" + $key + "**"
     !endif
     !if ($payload != "")
-        !$attributes = $attributes + "\n<img:" + $payloadico + "> " + $payload + ""
+        !$attributes = $attributes + "\n" + $payloadico + " " + $payload + ""
     !endif
-    !$content = "**<img:"+$kafkaico+"> " + $name + "**"
+    !$content = "**" + $kafkaico + " " + $name + "**"
     !if ($attributes != "")
         !$content = $content + "\n----" + $attributes
     !endif
     !if ($entries != "")
         !if ($dir != "vert")
-            !$content = $content + "\n----\n| <img:" + $keyico + "> |" + $_dict_foreach_value($entries, "$_kafka_topic_participant_entry_horiz_key_callback") + "\n"
+            !$content = $content + "\n----\n| " + $keyico + " |" + $_dict_foreach_value($entries, "$_kafka_topic_participant_entry_horiz_key_callback") + "\n"
             !$content = $content + "| |" + $_dict_foreach_value($entries, "$_kafka_topic_participant_entry_horiz_value_callback")
         !else
-            !$content = $content + "\n----\n| <img:" + $keyico + "> | |"
+            !$content = $content + "\n----\n| " + $keyico + " | |"
             !$content = $content + $_dict_foreach_value($entries, "$_kafka_topic_participant_entry_vert_callback")
         !endif
     !endif

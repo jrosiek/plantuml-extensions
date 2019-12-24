@@ -1,6 +1,6 @@
 # plantuml-extensions
 
-Various extensions PlantUML
+Various extensions for PlantUML
 
 ## Usage example:
 

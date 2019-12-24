@@ -2,7 +2,9 @@
 
 Various extensions for PlantUML
 
-<img src="sequence/kafka-topic-participant-example.png" width="200" align="center">
+<p align="center">
+    <img src="sequence/kafka-topic-participant-example.png" width="200">
+</p>
 
 ## Usage example:
 
@@ -25,11 +27,16 @@ $puml_ext_include(art/logos16.iuml)
 
 ## Extensions
 
+### Art
+
+* art/octicons{16,24,32} - sprites generated from https://octicons.github.com
+* art/logos{16,24,32} - sprites with various logos
+
 ### Sequence diagrams
 
-* [kafka_topic_participant](./sequence/kafka-topic-participant.md) - create participant that represents kafka topic
+* [sequence/kafka_topic_participant](./sequence/kafka-topic-participant.md) - create participant that represents kafka topic
 
 
 ### Component diagrams
 
-* [kafka_topic_component](./component/kafka-topic-component.md) - create component that represents kafka topic
+* [component/kafka_topic_component](./component/kafka-topic-component.md) - create component that represents kafka topic

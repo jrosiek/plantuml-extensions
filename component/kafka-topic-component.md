@@ -24,10 +24,6 @@ It lets you add the information what is the topic key and value and whether it i
 ```
 @startuml
 
-@startuml
-
-!preprocessorV2
-
 !include https://raw.githubusercontent.com/jrosiek/plantuml-extensions/master/puml_ext.iuml
 
 $puml_ext_include(component/kafka-topic-component.iuml)

@@ -11,8 +11,6 @@ Various extensions for PlantUML
 ```
 @startuml
 
-!preprocessorV2
-
 !include https://raw.githubusercontent.com/jrosiek/plantuml-extensions/master/puml_ext.iuml
 
 $puml_ext_include(extension-name)

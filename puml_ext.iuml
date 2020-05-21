@@ -11,7 +11,7 @@
 '   !include https://raw.githubusercontent.com/jrosiek/plantuml-extensions/master/puml_ext.iuml
 '   $puml_ext_include(art/logos16.iuml)
 
-!unquoted function $puml_ext_include($relpath)
+!unquoted procedure $puml_ext_include($relpath)
     !$baseurl = "https://raw.githubusercontent.com/jrosiek/plantuml-extensions/master"
     !include $baseurl/$relpath
-!endfunction
+!endprocedure

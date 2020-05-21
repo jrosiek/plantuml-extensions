@@ -1,5 +1,7 @@
 # plantuml-extensions
 
+> Tested with PlantUML 1.2020.10
+
 Various extensions for PlantUML
 
 <p align="center">

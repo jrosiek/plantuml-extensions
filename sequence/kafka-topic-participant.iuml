@@ -25,7 +25,7 @@ $puml_ext_include(art/logos24.iuml)
     !return "\n| **" + $key + "** | " + $value + " |"
 !endfunction
 
-!unquoted function kafka_topic_participant($id, $name, $key="", $payload="", $compacted="", $entries="", $dir="horiz")
+!unquoted procedure kafka_topic_participant($id, $name, $key="", $payload="", $compacted="", $entries="", $dir="horiz")
     !$keyico = "<$octicon16_key>"
     !$payloadico = "<$octicon16_file_binary>"
     !$compactico = "<$octicon16_versions>"
@@ -54,4 +54,4 @@ $puml_ext_include(art/logos24.iuml)
         !endif
     !endif
     queue "//<U+00AB>Kafka<U+00BB>//\n$content" as $id
-!endfunction
+!endprocedure

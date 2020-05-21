@@ -50,14 +50,14 @@
     !endif
 !endfunction
 
-!function $_list_foreach_void($list, $func, $arg="", $sep="|")
+!procedure $_list_foreach_void($list, $func, $arg="", $sep="|")
     !if (%not($_list_is_empty($list, $sep)))
         !$head = $_list_head($list, $_undef, $sep)
         !$tail = $_list_tail($list, $_undef, $sep)
         %invoke_void_func($func, $head, $arg)
         $_list_foreach_void($tail, $func, $arg, $sep)
     !endif
-!endfunction
+!endprocedure
 
 !function $_list_at($list, $index, $default=$_undef, $sep="|")
     !if ($_list_is_empty($list, $sep))
@@ -112,21 +112,21 @@
     !return %call_user_func($func, $key, $value, $arg)
 !endfunction
 
-!function $__dict_foreach_void_callback($item, $arg)
+!procedure $__dict_foreach_void_callback($item, $arg)
     !$keysep = $_dict_at($arg, "keysep", $_undef, $_va_key, $_va_sep)
     !$func = $_dict_at($arg, "func", $_undef, $_va_key, $_va_sep)
     !$arg = $_dict_at($arg, "arg", $_undef, $_va_key, $_va_sep)
     !$key = $_dict_item_key($item, $keysep)
     !$value = $_dict_item_value($item, $keysep)
     %invoke_void_func($func, $key, $value, $arg)
-!endfunction
+!endprocedure
 
 !function $_dict_foreach_value($list, $func, $arg="", $keysep=":", $sep="|")
     !$arg = "keysep" + $_va_key + $keysep + $_va_sep + "func" + $_va_key + $func + $_va_sep + "arg" + $_va_key + $arg
     !return $_list_foreach_value($list, "$__dict_foreach_value_callback", $arg, $sep)
 !endfunction
 
-!function $_dict_foreach_void($list, $func, $arg="", $keysep=":", $sep="|")
+!procedure $_dict_foreach_void($list, $func, $arg="", $keysep=":", $sep="|")
     !$arg = "keysep" + $_va_key + $keysep + $_va_sep + "func" + $_va_key + $func + $_va_sep + "arg" + $_va_key + $arg
     $_list_foreach_void($list, "$__dict_foreach_void_callback", $arg, $sep)
-!endfunction
+!endprocedure

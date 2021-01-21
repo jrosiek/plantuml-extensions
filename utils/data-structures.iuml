@@ -54,7 +54,7 @@
     !if (%not($_list_is_empty($list, $sep)))
         !$head = $_list_head($list, $_undef, $sep)
         !$tail = $_list_tail($list, $_undef, $sep)
-        %invoke_void_func($func, $head, $arg)
+        %invoke_procedure($func, $head, $arg)
         $_list_foreach_void($tail, $func, $arg, $sep)
     !endif
 !endprocedure
@@ -118,7 +118,7 @@
     !$arg = $_dict_at($arg, "arg", $_undef, $_va_key, $_va_sep)
     !$key = $_dict_item_key($item, $keysep)
     !$value = $_dict_item_value($item, $keysep)
-    %invoke_void_func($func, $key, $value, $arg)
+    %invoke_procedure($func, $key, $value, $arg)
 !endprocedure
 
 !function $_dict_foreach_value($list, $func, $arg="", $keysep=":", $sep="|")

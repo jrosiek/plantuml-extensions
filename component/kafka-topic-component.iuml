@@ -22,39 +22,39 @@ $puml_ext_include(art/logos24.iuml)
     !return " " + $value + " |"
 !endfunction
 
-!function $_kafka_topic_component_entry_vert_callback($key, $value, $arg)
-    !return "\n| **" + $key + "** | " + $value + " |"
-!endfunction
+!procedure $_kafka_topic_component_entry_vert_callback($key, $value, $arg)
+    | **$key** | $value |
+!endprocedure
 
 !unquoted procedure kafka_topic_component($id, $name, $key="", $payload="", $compacted="", $entries="", $dir="horiz")
     !$keyico = "<$octicon16_key>"
     !$payloadico = "<$octicon16_file_binary>"
     !$compactico = "<$octicon16_versions>"
     !$kafkaico = "<$logo24_apache_kafka>"
-    !$attributes = ""
-    !if ($compacted == "compacted")
-        !$attributes = $attributes + "\n" + $compactico + " compacted"
-    !endif
-    !if ($key != "")
-        !$attributes = $attributes + "\n" + $keyico + " **" + $key + "**"
-    !endif
-    !if ($payload != "")
-        !$attributes = $attributes + "\n" + $payloadico + " " + $payload + ""
-    !endif
-    !$content = "**" + $kafkaico + " " + $name + "**"
-    !if ($attributes != "")
-        !$content = $content + "\n----" + $attributes
-    !endif
-    !if ($entries != "")
-        !if ($dir != "vert")
-            !$content = $content + "\n----\n| " + $keyico + " |" + $_dict_foreach_value($entries, "$_kafka_topic_component_entry_horiz_key_callback") + "\n"
-            !$content = $content + "| |" + $_dict_foreach_value($entries, "$_kafka_topic_component_entry_horiz_value_callback")
-        !else
-            !$content = $content + "\n----\n| " + $keyico + " | |"
-            !$content = $content + $_dict_foreach_value($entries, "$_kafka_topic_component_entry_vert_callback")
-        !endif
-    !endif
+   
     queue $id <<Kafka>> [
-        $content
+            **$kafkaico $name**
+        !if ($compacted == "compacted" || $key != "" || $payload != "")
+            ----
+        !endif
+        !if ($compacted == "compacted")
+            $compactico compacted
+        !endif
+        !if ($key != "")
+            $keyico **$key**
+        !endif
+        !if ($payload != "")
+            $payloadico payload
+        !endif
+        !if ($entries != "")
+            ----
+        !if ($dir != "vert")
+            | $keyico | $_dict_foreach_value($entries, "$_kafka_topic_component_entry_horiz_key_callback")
+            | | $_dict_foreach_value($entries, "$_kafka_topic_component_entry_horiz_value_callback")
+        !else
+            | $keyico| |
+            $_dict_foreach_void($entries, "$_kafka_topic_component_entry_vert_callback")
+        !endif
+        !endif
     ]
 !endprocedure

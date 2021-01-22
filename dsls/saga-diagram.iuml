@@ -21,7 +21,7 @@ skinparam NoteBackgroundColor Ivory
 skinparam NoteBorderColor Sienna
 
 
-!$end_counter = 0
+!global $end_counter = 0
 
 !procedure $_prefix_line_callback($line, $prefix)
     $prefix $line

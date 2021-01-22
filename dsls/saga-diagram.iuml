@@ -34,7 +34,7 @@ skinparam NoteBorderColor Sienna
 !endprocedure
 
 
-!unquoted procedure $command($title,$target,$cmdname, $desc="", $tag="", $targets="")
+!unquoted procedure $command($title,$target,$cmdname, $desc="", $tag="", $links="")
     !if ($tag == "")
         !$tag = $title 
     !endif 
@@ -45,41 +45,41 @@ skinparam NoteBorderColor Sienna
         $tag: ----
         $_prefix_lines($tag+":", $desc)
     !endif
-    $link($tag, $targets)
+    $link($tag, $links)
 !endprocedure 
 
-!unquoted procedure $action($title, $desc="", $tag="", $targets="")
+!unquoted procedure $action($title, $desc="", $tag="", $links="")
     !if ($tag == "")
         !$tag = $title 
     !endif
     state "<&cog>  $title" as $tag 
     $_prefix_lines($tag+":", $desc)
-    $link($tag, $targets)
+    $link($tag, $links)
 !endprocedure 
 
-!unquoted procedure $failure($title, $desc="", $tag="", $targets="")
+!unquoted procedure $failure($title, $desc="", $tag="", $links="")
     !if ($tag == "")
         !$tag = $title 
     !endif
     state "<&x>  $title" as $tag <<Failure>>
     $_prefix_lines($tag+":", $desc)
-    $link($tag, $targets)
+    $link($tag, $links)
 !endprocedure 
 
-!unquoted procedure $error($title, $desc="", $tag="", $targets="")
+!unquoted procedure $error($title, $desc="", $tag="", $links="")
     !if ($tag == "")
         !$tag = $title 
     !endif
     state "<&x>  $title" as $tag <<Error>>
     $_prefix_lines($tag+":", $desc)
-    $link($tag, $targets)
+    $link($tag, $links)
 !endprocedure 
 
-!unquoted procedure $success($title, $desc="", $tag="", $targets="")
+!unquoted procedure $success($title, $desc="", $tag="", $links="")
     !if ($tag == "")
         !$tag = $title 
     !endif
     state "<&thumb-up>  $title" as $tag <<Success>>
     $_prefix_lines($tag+":", $desc)
-    $link($tag, $targets)
+    $link($tag, $links)
 !endprocedure 

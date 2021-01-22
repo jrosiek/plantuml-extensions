@@ -29,8 +29,8 @@ skinparam NoteBorderColor Sienna
     $_list_foreach_void($lines,"$_prefix_line_callback",$prefix,$sep)
 !endprocedure
 
-!unquoted procedure $link($source,$targets) 
-    $_prefix_lines($source, $targets, "|")
+!unquoted procedure $link($source, $links) 
+    $_prefix_lines($source, $links, "|")
 !endprocedure
 
 

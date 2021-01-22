@@ -48,38 +48,34 @@ skinparam NoteBorderColor Sienna
     state "<&transfer>  $title" as $tag 
 !endprocedure 
 
-!unquoted procedure $action($title, $desc="", $tag="", $links="")
+!procedure $_simple_node($title, $desc, $tag="", $icon="", $stereotype="", $links="")
     !if ($tag == "")
         !$tag = $title 
     !endif
     $_prefix_lines($tag+":", $desc)
     $link($tag, $links)
-    state "<&cog>  $title" as $tag 
+    state "$icon  $title" as $tag $stereotype
+!endprocedure
+
+!procedure $_simple_terminal_node($title, $desc, $tag="", $icon="", $stereotype="", $links="")
+    !if ($links == "")
+        !$links = "--> [*]"
+    !endif
+     $_simple_node($title, $desc, $tag, $icon, $stereotype, $links)
+!endprocedure
+
+!unquoted procedure $action($title, $desc="", $tag="", $links="")
+    $_simple_node($title, $desc, $tag, "<&cog>", $links=$links)
 !endprocedure 
 
 !unquoted procedure $failure($title, $desc="", $tag="", $links="")
-    !if ($tag == "")
-        !$tag = $title 
-    !endif
-    $_prefix_lines($tag+":", $desc)
-    $link($tag, $links)
-    state "<&x>  $title" as $tag <<Failure>>
+    $_simple_terminal_node($title, $desc, $tag, "<&x>", "<<Failure>>", $links)
 !endprocedure 
 
 !unquoted procedure $error($title, $desc="", $tag="", $links="")
-    !if ($tag == "")
-        !$tag = $title 
-    !endif
-    $_prefix_lines($tag+":", $desc)
-    $link($tag, $links)
-    state "<&x>  $title" as $tag <<Error>>
+     $_simple_terminal_node($title, $desc, $tag, "<&x>", "<<Error>>", $links)
 !endprocedure 
 
 !unquoted procedure $success($title, $desc="", $tag="", $links="")
-    !if ($tag == "")
-        !$tag = $title 
-    !endif
-    $_prefix_lines($tag+":", $desc)
-    $link($tag, $links)
-    state "<&thumb-up>  $title" as $tag <<Success>>
-!endprocedure 
+    $_simple_terminal_node($title, $desc, $tag, "<&thumb-up>", "<<Success>>", $links)
+!endprocedure

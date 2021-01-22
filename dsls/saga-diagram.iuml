@@ -20,6 +20,7 @@ skinparam NoteBackgroundColor Ivory
 skinparam NoteBorderColor Sienna
 
 
+!$end_counter = 0
 
 !procedure $_prefix_line_callback($line, $prefix)
     $prefix $line
@@ -59,7 +60,9 @@ skinparam NoteBorderColor Sienna
 
 !procedure $_simple_terminal_node($title, $desc, $tag="", $icon="", $stereotype="", $links="")
     !if ($links == "")
-        !$links = "--> [*]"
+        state "end##$end_counter" <<end>> 
+        !$links = "--> end" + $end_counter
+        !$end_counter = $end_counter + 1
     !endif
      $_simple_node($title, $desc, $tag, $icon, $stereotype, $links)
 !endprocedure

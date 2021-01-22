@@ -1,7 +1,6 @@
 ' TODO: Documentation
 
-
-$puml_ext_include(dsls/saga-diagram.iuml)
+$puml_ext_include(utils/data-structures.iuml)
 
 hide empty description
 
@@ -21,6 +20,7 @@ skinparam NoteBackgroundColor Ivory
 skinparam NoteBorderColor Sienna
 
 
+
 !procedure $_prefix_line_callback($line, $prefix)
     $prefix $line
 !endprocedure
@@ -29,59 +29,57 @@ skinparam NoteBorderColor Sienna
     $_list_foreach_void($lines,"$_prefix_line_callback",$prefix,$sep)
 !endprocedure
 
+!unquoted procedure $link($source,$targets) 
+    $_prefix_lines($source, $targets, "|")
+!endprocedure
 
-!unquoted procedure $command($title,$target,$cmdname,$desc="", $tag="", $destinations="")
+
+!unquoted procedure $command($title,$target,$cmdname, $desc="", $tag="", $targets="")
     !if ($tag == "")
         !$tag = $title 
     !endif 
     state "<&transfer>  $title" as $tag 
     $tag: |_ **Target**: $target
     $tag: |_ **Command**: $cmdname
-    $_prefix_lines($tag+":", $desc)
-    $link($tag,$destinations) 
+    !if ($desc != "")
+        $tag: ----
+        $_prefix_lines($tag+":", $desc)
+    !endif
+    $link($tag, $targets)
 !endprocedure 
 
-!unquoted procedure $action($title, $desc="", $tag="", $destinations="")
+!unquoted procedure $action($title, $desc="", $tag="", $targets="")
     !if ($tag == "")
         !$tag = $title 
     !endif
     state "<&cog>  $title" as $tag 
     $_prefix_lines($tag+":", $desc)
-    $link($tag,$destinations) 
+    $link($tag, $targets)
 !endprocedure 
 
-!unquoted procedure $failure($title, $desc="", $tag="", $destinations="")
+!unquoted procedure $failure($title, $desc="", $tag="", $targets="")
     !if ($tag == "")
         !$tag = $title 
     !endif
     state "<&x>  $title" as $tag <<Failure>>
     $_prefix_lines($tag+":", $desc)
-    $link($tag,$destinations) 
+    $link($tag, $targets)
 !endprocedure 
 
-!unquoted procedure $error($title, $desc="", $tag="", $destinations="")
+!unquoted procedure $error($title, $desc="", $tag="", $targets="")
     !if ($tag == "")
         !$tag = $title 
     !endif
     state "<&x>  $title" as $tag <<Error>>
     $_prefix_lines($tag+":", $desc)
-    $link($tag,$destinations) 
+    $link($tag, $targets)
 !endprocedure 
 
-!unquoted procedure $success($title, $desc="", $tag="", $destinations="")
+!unquoted procedure $success($title, $desc="", $tag="", $targets="")
     !if ($tag == "")
         !$tag = $title 
     !endif
     state "<&thumb-up>  $title" as $tag <<Success>>
     $_prefix_lines($tag+":", $desc)
-    $link($tag,$destinations) 
+    $link($tag, $targets)
 !endprocedure 
-
-
-!procedure $_link_callback($dest, $source)
-    $source $dest
-!endprocedure
-
-!unquoted procedure $link($source,$destinations) 
-     $_list_foreach_void($destinations,"$_link_callback",$source)
-!endprocedure

@@ -1,0 +1,82 @@
+' TODO: Documentation
+
+
+$puml_ext_include(utils/data-structures.iuml)
+
+hide empty description
+
+skinparam ArrowColor Black
+skinparam StateBorderColor #525252
+
+skinparam ArrowColor Black
+skinparam StateBorderColor #525252
+
+skinparam StateBackgroundColor LightBlue
+skinparam StateBackgroundColor<<Failure>> LightCoral
+skinparam StateBackgroundColor<<Error>> Gold
+skinparam StateBackgroundColor<<Success>> LightGreen
+skinparam StateBackgroundColor<<Missing>> LightGray 
+
+skinparam NoteBackgroundColor Ivory
+skinparam NoteBorderColor Sienna
+
+
+!procedure $_prefix_line_callback($line, $prefix)
+    $prefix $line
+!endprocedure
+
+!procedure $_prefix_lines($prefix,$lines,$sep="\n")
+    $_list_foreach_void($lines,"$_prefix_line_callback",$prefix,$sep)
+!endprocedure
+
+
+!unquoted procedure $command($title,$target,$cmdname,$desc="", $tag="")
+    !if ($tag == "")
+        !$tag = $title 
+    !endif 
+    state "<&transfer>  $title" as $tag 
+    $tag: |_ **Target**: $target
+    $tag: |_ **Command**: $cmdname
+    $_prefix_lines($tag+":", $desc)
+!endprocedure 
+
+!unquoted procedure $action($title, $desc="", $tag="")
+    !if ($tag == "")
+        !$tag = $title 
+    !endif
+    state "<&cog>  $title" as $tag 
+    $_prefix_lines($tag+":", $desc)
+!endprocedure 
+
+!unquoted procedure $failure($title, $desc="", $tag="")
+    !if ($tag == "")
+        !$tag = $title 
+    !endif
+    state "<&x>  $title" as $tag <<Failure>>
+    $_prefix_lines($tag+":", $desc)
+!endprocedure 
+
+!unquoted procedure $error($title, $desc="", $tag="")
+    !if ($tag == "")
+        !$tag = $title 
+    !endif
+    state "<&x>  $title" as $tag <<Error>>
+    $_prefix_lines($tag+":", $desc)
+!endprocedure 
+
+!unquoted procedure $success($title, $desc="", $tag="")
+    !if ($tag == "")
+        !$tag = $title 
+    !endif
+    state "<&thumb-up>  $title" as $tag <<Success>>
+    $_prefix_lines($tag+":", $desc)
+!endprocedure 
+
+
+!procedure $_link_callback($dest, $source)
+    $source $dest
+!endprocedure
+
+!unquoted procedure $link($source,$destinations) 
+     $_list_foreach_void($destinations,"$_link_callback",$source)
+!endprocedure

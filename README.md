@@ -1,6 +1,6 @@
 # plantuml-extensions
 
-> Tested with PlantUML 1.2020.10
+> Tested with PlantUML 1.2021.0
 
 Various extensions for PlantUML
 

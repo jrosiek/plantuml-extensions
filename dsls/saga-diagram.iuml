@@ -83,4 +83,3 @@ skinparam NoteBorderColor Sienna
     $_simple_terminal_node($title, $desc, $tag, "<&thumb-up>", "<<Success>>", $links)
 !endprocedure
 
-!log @@@> $end_counter

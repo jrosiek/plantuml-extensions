@@ -1,7 +1,7 @@
 ' TODO: Documentation
 
 
-$puml_ext_include(utils/data-structures.iuml)
+$puml_ext_include(dsls/saga-diagram.iuml)
 
 hide empty description
 
@@ -30,7 +30,7 @@ skinparam NoteBorderColor Sienna
 !endprocedure
 
 
-!unquoted procedure $command($title,$target,$cmdname,$desc="", $tag="")
+!unquoted procedure $command($title,$target,$cmdname,$desc="", $tag="", $destinations="")
     !if ($tag == "")
         !$tag = $title 
     !endif 
@@ -38,38 +38,43 @@ skinparam NoteBorderColor Sienna
     $tag: |_ **Target**: $target
     $tag: |_ **Command**: $cmdname
     $_prefix_lines($tag+":", $desc)
+    $link($tag,$destinations) 
 !endprocedure 
 
-!unquoted procedure $action($title, $desc="", $tag="")
+!unquoted procedure $action($title, $desc="", $tag="", $destinations="")
     !if ($tag == "")
         !$tag = $title 
     !endif
     state "<&cog>  $title" as $tag 
     $_prefix_lines($tag+":", $desc)
+    $link($tag,$destinations) 
 !endprocedure 
 
-!unquoted procedure $failure($title, $desc="", $tag="")
+!unquoted procedure $failure($title, $desc="", $tag="", $destinations="")
     !if ($tag == "")
         !$tag = $title 
     !endif
     state "<&x>  $title" as $tag <<Failure>>
     $_prefix_lines($tag+":", $desc)
+    $link($tag,$destinations) 
 !endprocedure 
 
-!unquoted procedure $error($title, $desc="", $tag="")
+!unquoted procedure $error($title, $desc="", $tag="", $destinations="")
     !if ($tag == "")
         !$tag = $title 
     !endif
     state "<&x>  $title" as $tag <<Error>>
     $_prefix_lines($tag+":", $desc)
+    $link($tag,$destinations) 
 !endprocedure 
 
-!unquoted procedure $success($title, $desc="", $tag="")
+!unquoted procedure $success($title, $desc="", $tag="", $destinations="")
     !if ($tag == "")
         !$tag = $title 
     !endif
     state "<&thumb-up>  $title" as $tag <<Success>>
     $_prefix_lines($tag+":", $desc)
+    $link($tag,$destinations) 
 !endprocedure 
 
 

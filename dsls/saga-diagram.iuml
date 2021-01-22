@@ -15,12 +15,13 @@ skinparam StateBackgroundColor<<Failure>> LightCoral
 skinparam StateBackgroundColor<<Error>> Gold
 skinparam StateBackgroundColor<<Success>> LightGreen
 skinparam StateBackgroundColor<<Missing>> LightGray 
+skinparam StateBackgroundColor<<Init>> LightGray 
 
 skinparam NoteBackgroundColor Ivory
 skinparam NoteBorderColor Sienna
 
 
-!global $end_counter = 0
+!$end_counter = 0
 
 !procedure $_prefix_line_callback($line, $prefix)
     $prefix $line
@@ -83,3 +84,13 @@ skinparam NoteBorderColor Sienna
     $_simple_terminal_node($title, $desc, $tag, "<&thumb-up>", "<<Success>>", $links)
 !endprocedure
 
+!unquoted procedure $init($input, $desc="", $links="")
+    [*] --> _init_
+    $_prefix_lines("_init_: |_ ", $input)
+    !if ($desc != "") 
+        _init_: ----
+        $_prefix_lines("_init_: ", $desc)
+    !endif
+    $link(_init_, $links)
+    state "<&excerpt>" as _init_ <<Init>>
+!endprocedure

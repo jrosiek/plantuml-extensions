@@ -44,7 +44,7 @@ $puml_ext_include(art/logos24.iuml)
             $keyico **$key**
         !endif
         !if ($payload != "")
-            $payloadico payload
+            $payloadico $payload
         !endif
         !if ($entries != "")
             ----
